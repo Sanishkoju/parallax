@@ -334,6 +334,7 @@ width: 100%;
     left:0;
     right:0;
     top:-350px;
+    bottom:0;
         /* z-index: 1; */
 }
  .cloud{
@@ -348,7 +349,7 @@ width: 100%;
     animation: cloudLoop 80s linear infinite;
     z-index: 2;
     pointer-events: none;
-    height: 26.75em;
+    height: 23.75em;
     filter: grayscale(1) invert(1) brightness(2.5) contrast(1);
 
 
@@ -432,7 +433,6 @@ width: 100%;
 
     .right {
       flex: 2;
-      padding-left: 40px;
       font-size: 16px;
       color: #444;
       line-height: 1.6;
@@ -463,6 +463,8 @@ width: 100%;
         display: flex;
             align-items: center;
     justify-content: center;
+    gap:40px;
+    padding-block:50px;
     }
     form {
   display: flex;
@@ -581,7 +583,20 @@ iframe{
   inset:0;
   z-index: 1;
 }
-
+label p{
+  text-align: left;
+}
+@media(max-width:768px){
+  .row{
+    flex-direction: column;
+  }
+.absolute{
+    top:-100px;
+  }
+  .middle{
+    flex-direction: column;
+  }
+}
     </style>
 </head>
 <body>
@@ -628,7 +643,7 @@ iframe{
                 <h1>MOUNTAIN <br> WORLD</h1>
             </div>
             <div class="col-right">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio vitae quos ratione nisi eveniet ullam consequatur dolores veritatis ad laudantium nobis, fuga voluptatem esse praesentium. Dolores ex fuga, ipsam voluptate, dicta laborum repellat earum, maxime tempora nobis non eligendi incidunt eos ratione dolore corrupti delectus optio at! Nemo laboriosam distinctio, ut perspiciatis esse voluptatibus doloribus soluta dicta deleniti repudiandae, ex eveniet sapiente? Error similique aliquid perspiciatis sunt, sit deleniti dignissimos dolorem, ab nisi commodi quis, laboriosam veniam enim recusandae dolores neque possimus. Adipisci, beatae quisquam? Ipsa rerum quis eligendi laboriosam est, maxime delectus cupiditate consequuntur corporis nulla itaque minus nam?</p>
+                <p>Lorem, ipsum dolor sit  ut perspiciatis esse voluptatibus doloribus soluta dicta deleniti repudiandae, ex eveniet sapiente? Error similique aliquid perspiciatis sunt, sit deleniti dignissimos dolorem, ab nisi commodi quis, laboriosam veniam enim recusandae dolores neque possimus. Adipisci, beatae quisquam? Ipsa rerum quis eligendi laboriosam est, maxime delectus cupiditate consequuntur corporis nulla itaque minus nam?</p>
             </div>
             </div>
         </div>
@@ -638,7 +653,7 @@ iframe{
         </section>
       </div>
       <section id="section2" class="section layer">
-                <figure class="absolute">
+                <figure class="absolute" >
             <img src="images/savage.webp" />
         </figure>
                 <div class="cloud2"></div>
@@ -745,9 +760,9 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, saepe?      
     <div class="forget">
       <label for="Save-login">
         <input type="checkbox" id="Save-login" />
-        <p>Save login information</p>
+        <p style="font-size: 13px;">Save login information</p>
       </label>
-      <a href="#">Forgot password?</a>
+      <a href="#" style="font-size: 13px;">Forgot password?</a>
     </div>
     <button type="submit">Log In</button>
     <div class="Create-account">
